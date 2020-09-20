@@ -13,6 +13,11 @@ h1 {
   font-weight: 500;
 }
 
+p {
+  text-align: center;
+  font-size: 11px;
+}
+
 .today {
   display: block;
   padding: 15px;
