@@ -1,0 +1,59 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+form {
+  text-align: center;
+  padding: 10px;
+}
+h1 {
+  color: #5b6275;
+  padding: 15px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.today {
+  display: block;
+  padding: 15px;
+  font-size: 13px;
+}
+
+.weather {
+  background: linear-gradient(#cfedfd, #e5e6e8);
+  border: solid;
+  border-color: #5b6275;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+}
+.list {
+  color: #5b6275;
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  text-align: center;
+}
+.day {
+  font-size: 20px;
+  font-weight: 100;
+  padding: 10px;
+  text-align: center;
+  color: #5b6275;
+}
+.sun {
+  color: #5b6275;
+}
+.showers {
+  color: #5b6275;
+}
+.overcast {
+  color: #5b6275;
+}
+
+#date {
+  font-size: 15px;
+  font-weight: 400;
+}

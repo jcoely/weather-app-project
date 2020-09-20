@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2fa63fcf84.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="weather">
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Search"
+          autocomplete="off"
+          autofocus="on"
+          id="search-text-input"
+        />
+        <input type="submit" value="Search" />
+      </form>
+      <div class="row">
+        <div class="col">
+          <h1>
+            <div id="placeName"></div>
+            <div id="date"></div>
+          </h1>
+        </div>
+        <div class="col, today">
+          <i class="fas fa-cloud-showers-heavy showers"></i>
+          <span id="temp"></span>
+          <a href="" id="celcius">C</a> <a href="" id="farenheit">F</a> <br />
+          <span id="weather-type"></span> <br />Humidity:
+          <span id="humidity"></span>%
+        </div>
+      </div>
+      <div class="row list">
+        <div class="col-3"></div>
+      </div>
+      <hr />
+      <div class="row day">
+        <div class="col-3"><i class="far fa-sun sun"></i></div>
+        <div class="col-3">19C</div>
+        <div class="col-3">Monday</div>
+      </div>
+      <div class="row day">
+        <div class="col-3">
+          <i class="fas fa-cloud-showers-heavy showers"></i>
+        </div>
+        <div class="col-3">19C</div>
+        <div class="col-3">Tuesday</div>
+      </div>
+      <div class="row day">
+        <div class="col-3"><i class="fas fa-cloud-sun overcast"></i></div>
+        <div class="col-3">19C</div>
+        <div class="col-3">Wednesay</div>
+      </div>
+      <div class="row day">
+        <div class="col-3">
+          <i class="fas fa-cloud-showers-heavy showers"></i>
+        </div>
+        <div class="col-3">19C</div>
+        <div class="col-3">Thursday</div>
+      </div>
+      <div class="row day">
+        <div class="col-3"><i class="far fa-sun sun"></i></div>
+        <div class="col-3">19C</div>
+        <div class="col-3">Friday</div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
