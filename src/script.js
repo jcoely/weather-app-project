@@ -23,6 +23,19 @@ let day = days[weekDays];
 let todayDate = document.querySelector("#date");
 todayDate.innerHTML = `${hours}:${minutes} ${day}`;
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showWeather(response) {
   document.querySelector("#placeName").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -70,6 +83,16 @@ function displayForecast(response) {
   let fifthIcon = document.querySelector("#fifthIcon");
   fifthIcon.innerHTML = `
     <img src="http://openweathermap.org/img/wn/${response.data.list[5].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
+  let firstTime = document.querySelector("#firstTime");
+  firstTime.innerHTML = `${formatHours(response.data.list[1].dt * 1000)}`;
+  let secondTime = document.querySelector("#secondTime");
+  secondTime.innerHTML = `${formatHours(response.data.list[2].dt * 1000)}`;
+  let thirdTime = document.querySelector("#thirdTime");
+  thirdTime.innerHTML = `${formatHours(response.data.list[3].dt * 1000)}`;
+  let fourthTime = document.querySelector("#fourthTime");
+  fourthTime.innerHTML = `${formatHours(response.data.list[4].dt * 1000)}`;
+  let fifthTime = document.querySelector("#fifthTime");
+  fifthTime.innerHTML = `${formatHours(response.data.list[5].dt * 1000)}`;
 }
 
 function search(event) {
