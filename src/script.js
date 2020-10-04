@@ -31,6 +31,7 @@ function showWeather(response) {
   document.querySelector("#weather-type").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  celciusTemperature = response.data.main.temp;
 }
 
 function showDefault(city) {
@@ -47,20 +48,23 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-function showCelcius() {
+function showCelcius(event) {
   event.preventDefault();
-  let temp = document.querySelector("#temp");
-  temp.innerHTML = "19";
+  let celciusElement = document.querySelector("#temp");
+  celciusElement.innerHTML = Math.round(celciusTemperature);
 }
 let celciusClick = document.querySelector("#celcius");
 celciusClick.addEventListener("click", showCelcius);
 
-function showFarenheit() {
+function showFarenheit(event) {
   event.preventDefault();
-  let temp = document.querySelector("#temp");
-  temp.innerHTML = "66";
+  let farenheitTemp = (celciusTemperature * 9) / 5 + 32;
+  let farenheitElement = document.querySelector("#temp");
+  farenheitElement.innerHTML = Math.round(farenheitTemp);
 }
 let farenheitClick = document.querySelector("#farenheit");
 farenheitClick.addEventListener("click", showFarenheit);
+
+let celciusTemperature = null;
 
 showDefault("Amsterdam");
