@@ -62,3 +62,9 @@ p {
   font-size: 15px;
   font-weight: 400;
 }
+#temp {
+  font-size: 25px;
+}
+#deg {
+  font-size: 25px;
+}
