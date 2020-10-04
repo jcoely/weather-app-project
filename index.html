@@ -10,10 +10,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/2fa63fcf84.js"
@@ -27,12 +24,12 @@
       <form id="search-form">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search for a City"
           autocomplete="off"
           autofocus="on"
           id="search-text-input"
         />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search" class="searchButton"/>
       </form>
       <div class="row">
         <div class="col">
@@ -43,8 +40,8 @@
         </div>
         <div class="col, today">
           
-          <span id="temp"></span><span id="deg">°</span>
-          <a href="" id="celcius">C</a> | <a href="" id="farenheit">F</a> <br />
+          <span id="temp"></span><span id="deg"></span>
+          <a href="" id="celcius"> °C</a> |<a href="" id="farenheit">°F</a> <br />
           <span id="weather-type"></span> <br />Humidity:
           <span id="humidity"></span>%
         </div>
@@ -52,34 +49,29 @@
       <div class="row list">
         <div class="col-3"></div>
       </div>
-      <hr />
       <div class="row day">
-        <div class="col-3"><i class="far fa-sun sun"></i></div>
-        <div class="col-3">19C</div>
-        <div class="col-3">Monday</div>
+        <div class="col-3" id="firstIcon"></div>
+        <div class="col-3"><span id="firstTemp"></span>°C</div>
+        <div class="col-3"><span id="firstTime"></span>:00</div>
       </div>
       <div class="row day">
-        <div class="col-3">
-          <i class="fas fa-cloud-showers-heavy showers"></i>
-        </div>
-        <div class="col-3">19C</div>
+        <div class="col-3" id="secondIcon"></div>
+        <div class="col-3"><span id="secondTemp"></span>°C</div>
         <div class="col-3">Tuesday</div>
       </div>
       <div class="row day">
-        <div class="col-3"><i class="fas fa-cloud-sun overcast"></i></div>
-        <div class="col-3">19C</div>
+        <div class="col-3" id="thirdIcon"></div>
+        <div class="col-3"><span id="thirdTemp"></span>°C</div>
         <div class="col-3">Wednesay</div>
       </div>
       <div class="row day">
-        <div class="col-3">
-          <i class="fas fa-cloud-showers-heavy showers"></i>
-        </div>
-        <div class="col-3">19C</div>
+        <div class="col-3" id="fourthIcon"></div>
+        <div class="col-3"><span id="fourthTemp"></span>°C</div>
         <div class="col-3">Thursday</div>
       </div>
       <div class="row day">
-        <div class="col-3"><i class="far fa-sun sun"></i></div>
-        <div class="col-3">19C</div>
+        <div class="col-3" id="fifthIcon"></div>
+        <div class="col-3"><span id="fifthTemp"></span>°C</div>
         <div class="col-3">Friday</div>
       </div>
     </div>

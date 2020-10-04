@@ -7,7 +7,7 @@ form {
   padding: 10px;
 }
 h1 {
-  color: #5b6275;
+  color: #000000;
   padding: 15px;
   font-size: 30px;
   font-weight: 500;
@@ -25,17 +25,19 @@ p {
 }
 
 .weather {
-  background: linear-gradient(#cfedfd, #e5e6e8);
+  background-color: #e5e6e8;
   border: solid;
   border-color: #5b6275;
-  border-radius: 10px;
-  font-family: Helvetica, sans-serif;
+  border-radius: 5px;
+  border-width: 2px;
+  font-family: "Abel", sans-serif;
+  text-transform: uppercase;
   margin: 0 auto;
   max-width: 500px;
   padding: 40px;
 }
 .list {
-  color: #5b6275;
+  color: #000000;
   font-size: 25px;
   font-weight: 200;
   padding: 10px;
@@ -46,16 +48,42 @@ p {
   font-weight: 100;
   padding: 10px;
   text-align: center;
-  color: #5b6275;
+  color: #000000;
 }
-.sun {
-  color: #5b6275;
+.searchButton {
+  background: linear-gradient(
+    to left,
+    #9400d3,
+    #4b0082,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff7f00,
+    #ff0000
+  );
+  border: none;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: #000000;
+
+  font-size: 15px;
+  margin: 15px auto;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
-.showers {
-  color: #5b6275;
-}
-.overcast {
-  color: #5b6275;
+button:hover {
+  background: linear-gradient(
+    to left,
+    #9400d3,
+    #4b0082,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff7f00,
+    #ff0000
+  );
+  color: #ffffff;
+  cursor: pointer;
 }
 
 #date {

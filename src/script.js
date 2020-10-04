@@ -38,6 +38,38 @@ function showDefault(city) {
   let apiKey = "881f23c47e69b4bf462c95657d48577f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+  let firstTemperature = document.querySelector("#firstTemp");
+  firstTemperature.innerHTML = Math.round(response.data.list[1].main.temp);
+  let secondTemperature = document.querySelector("#secondTemp");
+  secondTemperature.innerHTML = Math.round(response.data.list[2].main.temp);
+  let thirdTemperature = document.querySelector("#thirdTemp");
+  thirdTemperature.innerHTML = Math.round(response.data.list[3].main.temp);
+  let fourthTemperature = document.querySelector("#fourthTemp");
+  fourthTemperature.innerHTML = Math.round(response.data.list[4].main.temp);
+  let fifthTemperature = document.querySelector("#fifthTemp");
+  fifthTemperature.innerHTML = Math.round(response.data.list[5].main.temp);
+  let firstIcon = document.querySelector("#firstIcon");
+  firstIcon.innerHTML = `
+    <img src="http://openweathermap.org/img/wn/${response.data.list[1].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
+  let secondIcon = document.querySelector("#secondIcon");
+  secondIcon.innerHTML = `
+    <img src="http://openweathermap.org/img/wn/${response.data.list[2].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
+  let thirdIcon = document.querySelector("#thirdIcon");
+  thirdIcon.innerHTML = `
+    <img src="http://openweathermap.org/img/wn/${response.data.list[3].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
+  let fourthIcon = document.querySelector("#fourthIcon");
+  fourthIcon.innerHTML = `
+    <img src="http://openweathermap.org/img/wn/${response.data.list[4].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
+  let fifthIcon = document.querySelector("#fifthIcon");
+  fifthIcon.innerHTML = `
+    <img src="http://openweathermap.org/img/wn/${response.data.list[5].weather[0].icon}@2x.png" width="40px" height="40px"/>`;
 }
 
 function search(event) {
