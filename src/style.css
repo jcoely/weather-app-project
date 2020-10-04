@@ -72,20 +72,6 @@ p {
   padding: 5px 10px;
   text-transform: uppercase;
 }
-button:hover {
-  background: linear-gradient(
-    to left,
-    #9400d3,
-    #4b0082,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff7f00,
-    #ff0000
-  );
-  color: #ffffff;
-  cursor: pointer;
-}
 
 #date {
   font-size: 15px;
